@@ -5,7 +5,7 @@ name: DEPLOY
 on:
   push:
     branches:
-    - main
+    - master
 
 jobs:
   deploy:
@@ -19,7 +19,7 @@ jobs:
         uses: burnett01/rsync-deployments@4.1
         with:
           switches: -avzr --delete --exclude="" --include="" --filter=""
-          remote_path: ~/httpdocs/
+          remote_path: ~/dev/git/
           remote_host: strange-solomon.111-112-113-114.plesk.page
           remote_user: strange-solomon
           remote_key: ${{ secrets.DEPLOY_KEY }}
