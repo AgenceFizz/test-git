@@ -16,4 +16,4 @@ jobs:
         remote_path: ~/dev/git/
         remote_host: agencefizz.com
         remote_user: agencefizz
-        remote_key: ${{ secrets.DEPLOY_KEY }}
+        remote_key: ${{ secrets.fizz }}
