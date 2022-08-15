@@ -1,0 +1,25 @@
+# source : https://github.com/marketplace/actions/rsync-deployments-action
+name: DEPLOY
+
+# Sur un "push" dans la branche "main"
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      
+      # Rsync deploy
+      - name: rsync deployments
+        uses: burnett01/rsync-deployments@4.1
+        with:
+          switches: -avzr --delete --exclude="" --include="" --filter=""
+          remote_path: ~/dev/git/
+          remote_host: agencefizz.com
+          remote_user: agencefizz
+          remote_key: ${{ secrets.DEPLOY_KEY }}
