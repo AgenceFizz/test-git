@@ -20,6 +20,6 @@ jobs:
         with:
           switches: -avzr --delete --exclude="" --include="" --filter=""
           remote_path: ~/dev/git/
-          remote_host: strange-solomon.111-112-113-114.plesk.page
-          remote_user: strange-solomon
+          remote_host: agencefizz.com
+          remote_user: agencefizz
           remote_key: ${{ secrets.DEPLOY_KEY }}
