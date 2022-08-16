@@ -14,7 +14,7 @@ jobs:
       with:
         switches: -avzr --delete --exclude="" --include="" --filter=""
         remote_path: ~/dev/git/
-        remote_host: agencefizz.com
+        remote_host: 146.88.232.170
         remote_user: agencefizz
         remote_port: 2908
         remote_key: ${{ secrets.DEPLOY_KEY }}
